@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Brand — Sleek Landing Page</title>
+  <meta name="description" content="A sleek landing page with a contact form that sends enquiries to your inbox." />
+
+  <!-- Open Graph (nice previews when sharing the link) -->
+  <meta property="og:title" content="Your Brand" />
+  <meta property="og:description" content="A sleek landing page with a contact form." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">YOUR BRAND</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#features">What we do</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <button class="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span class="navToggle__bar"></span>
+        <span class="navToggle__bar"></span>
+        <span class="navToggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="card hero__copy">
+          <div class="badge">✨ Simple, fast, and built to ship</div>
+
+          <h1 class="hero__title">
+            A <span class="accent">sleek</span> landing page that does its job.
+          </h1>
+
+          <p class="hero__lead">
+            Replace this with your one-liner: what you do + who it’s for + the outcome.
+            Keep it short. The internet has the attention span of a caffeinated squirrel.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn btn--primary" href="#contact">Contact us →</a>
+            <a class="btn btn--secondary" href="#features">See what we do</a>
+          </div>
+
+          <div class="miniGrid" id="features">
+            <div class="mini">
+              <h3>What you do</h3>
+              <p>One sentence describing your offer.</p>
+            </div>
+            <div class="mini">
+              <h3>Who it’s for</h3>
+              <p>Be specific. It’s weirdly powerful.</p>
+            </div>
+            <div class="mini">
+              <h3>Why you</h3>
+              <p>Credibility in one line.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card hero__panel" id="contact">
+          <div class="badge">📨 Contact us</div>
+          <h2 class="panel__title">Send an enquiry</h2>
+          <p class="panel__lead">
+            This form sends straight to your inbox using FormSubmit (free).
+          </p>
+
+          <!-- ✅ FREE FORM HANDLER (no backend) -->
+          <!-- 1) Replace YOUR_EMAIL@DOMAIN.COM with the inbox you want enquiries to land in.
+               2) First submission triggers an email verification step.
+          -->
+          <form class="form"
+                action="https://formsubmit.co/YOUR_EMAIL@DOMAIN.COM"
+                method="POST">
+
+            <!-- FormSubmit options -->
+            <input type="hidden" name="_subject" value="New website enquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="hidden" name="_next" value="thank-you.html" />
+
+            <!-- Honeypot (spam trap) -->
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" />
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="What can we help with?" required></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--full" type="submit">Send message →</button>
+
+            <p class="fineprint">
+              We’ll only use your details to reply to your enquiry. No spam. Spam is for 2009.
+            </p>
+          </form>
+
+          <div class="altContact">
+            <div class="altContact__line"></div>
+            <span class="altContact__text">or</span>
+            <div class="altContact__line"></div>
+          </div>
+
+          <a class="btn btn--secondary btn--full"
+             href="mailto:YOUR_EMAIL@DOMAIN.COM?subject=Website%20enquiry">
+            Email instead
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="footerCallout">
+      <div class="container footerCallout__inner">
+        <p class="footerCallout__text">Want something more customised (logo, sections, FAQ, etc.)?</p>
+        <a class="btn btn--secondary" href="#contact">Message us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> YOUR BRAND</span>
+      <span class="footer__right">
+        Built on GitHub Pages • <a href="#top">Back to top</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
