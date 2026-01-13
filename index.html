@@ -4,7 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Northline Ventures</title>
-  <meta name="description" content="Northline Ventures — building useful things. Get in touch." />
+  <meta name="description" content="Northline Ventures — build, launch, iterate. Talk to us." />
+
+  <meta property="og:title" content="Northline Ventures" />
+  <meta property="og:description" content="Build, launch, iterate. Talk to us." />
+  <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -12,15 +16,15 @@
 <body>
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="logo" href="#top" aria-label="Home">
-        <span class="logo__mark" aria-hidden="true"></span>
-        <span class="logo__text">Northline Ventures</span>
+      <a class="brand" href="#top" aria-label="Northline Ventures home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Northline Ventures</span>
       </a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#work">How we work</a>
-        <a class="nav__cta" href="#contact">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#offer">What we do</a>
+        <a href="#proof">Why us</a>
+        <a href="#contact" class="nav__cta">Contact</a>
       </nav>
 
       <button class="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
@@ -28,62 +32,69 @@
       </button>
     </div>
 
-    <nav class="mobileNav" aria-label="Mobile navigation">
-      <a href="#services">Services</a>
-      <a href="#work">How we work</a>
+    <nav class="mobileNav" aria-label="Mobile">
+      <a href="#offer">What we do</a>
+      <a href="#proof">Why us</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="pill">Brisbane • Building practical products</p>
-
-          <h1>
-            We build <span class="accent">simple</span> solutions<br />
-            to real problems.
-          </h1>
-
-          <p class="lead">
-            Use this space for a crisp one-liner about what Northline does.
-            Keep it human. Keep it short. Keep it out of corporate-speak jail.
-          </p>
-
-          <div class="actions">
-            <a class="btn btn--primary" href="#contact">Get in touch</a>
-            <a class="btn btn--ghost" href="#services">What we do</a>
+          <div class="badgeRow">
+            <span class="badge">🚀 Build fast</span>
+            <span class="badge badge--alt">🧪 Test ideas</span>
+            <span class="badge badge--alt2">⚡ Ship clean</span>
           </div>
 
-          <div class="stats">
-            <div class="stat">
-              <div class="stat__num">Fast</div>
-              <div class="stat__label">Simple builds, quick iterations</div>
+          <h1 class="hero__title">
+            Turn ideas into <span class="gradText">working products</span>—fast.
+          </h1>
+
+          <p class="hero__lead">
+            We design and build lean landing pages, prototypes, and lightweight automation
+            so you can validate quickly and move with confidence.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Let’s build →</a>
+            <a class="btn btn--ghost" href="#offer">See the offer</a>
+          </div>
+
+          <div class="signal">
+            <div class="signal__item">
+              <div class="signal__big">7–14 days</div>
+              <div class="signal__small">typical first shippable version</div>
             </div>
-            <div class="stat">
-              <div class="stat__num">Practical</div>
-              <div class="stat__label">Focused on outcomes</div>
+            <div class="signal__item">
+              <div class="signal__big">No fluff</div>
+              <div class="signal__small">clarity, speed, real outputs</div>
             </div>
-            <div class="stat">
-              <div class="stat__num">Clean</div>
-              <div class="stat__label">Design that doesn’t shout</div>
+            <div class="signal__item">
+              <div class="signal__big">Simple stack</div>
+              <div class="signal__small">fast sites, easy maintenance</div>
             </div>
           </div>
         </div>
 
-        <div class="hero__card">
-          <div class="heroCard__header">
-            <p class="kicker">Contact</p>
-            <h2>Send an enquiry</h2>
-            <p class="muted">
-              Messages go straight to your inbox. No subscriptions, no backend.
+        <!-- CONTACT CARD -->
+        <aside class="panel" id="contact" aria-label="Contact form">
+          <div class="panel__head">
+            <p class="panel__kicker">Contact</p>
+            <h2 class="panel__title">Start an enquiry</h2>
+            <p class="panel__lead">
+              Send a message. It lands in your inbox. No backend required.
             </p>
           </div>
 
           <!-- FREE: FormSubmit -->
-          <!-- Replace YOUR_EMAIL@DOMAIN.COM with where you want enquiries delivered. -->
-          <form class="form" action="https://formsubmit.co/YOUR_EMAIL@DOMAIN.COM" method="POST">
+          <!-- Replace YOUR_INBOX_EMAIL@... with your inbox -->
+          <form class="form" action="https://formsubmit.co/YOUR_INBOX_EMAIL@DOMAIN.COM" method="POST">
             <input type="hidden" name="_subject" value="New enquiry — Northline Ventures" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="true" />
@@ -102,85 +113,97 @@
 
             <div class="field">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="What can we help with?" required></textarea>
+              <textarea id="message" name="message" placeholder="What do you want to build?" required></textarea>
             </div>
 
-            <button class="btn btn--primary btn--full" type="submit">Send message</button>
+            <button class="btn btn--primary btn--full" type="submit">Send →</button>
 
             <p class="tiny muted">
-              We’ll only use this to reply to your enquiry. No newsletters unless you *ask*.
+              We’ll only use this to reply. No “weekly newsletter” ambush.
             </p>
           </form>
-        </div>
+
+          <div class="divider" aria-hidden="true"><span>or</span></div>
+
+          <a class="btn btn--ghost btn--full"
+             href="mailto:YOUR_INBOX_EMAIL@DOMAIN.COM?subject=Northline%20enquiry">
+            Email instead
+          </a>
+        </aside>
       </div>
     </section>
 
-    <section class="section" id="services">
+    <!-- OFFER -->
+    <section class="section" id="offer">
       <div class="container">
         <div class="section__head">
-          <h3>Services</h3>
-          <p class="muted">A simple set of offerings. Swap these to match what you actually do.</p>
+          <h3>What we do</h3>
+          <p class="muted">Pick one lane or combine them.</p>
         </div>
 
-        <div class="cards">
+        <div class="grid3">
           <article class="card">
+            <div class="card__icon">🧲</div>
             <h4>Landing pages</h4>
-            <p class="muted">Clean, fast pages that look premium and convert.</p>
+            <p class="muted">Clean, high-conversion pages that look premium and load fast.</p>
           </article>
+
           <article class="card">
+            <div class="card__icon">🧪</div>
             <h4>Prototypes</h4>
-            <p class="muted">Rapid MVPs to test ideas without over-building.</p>
+            <p class="muted">Clickable demos and MVPs that prove the concept before you overbuild.</p>
           </article>
+
           <article class="card">
+            <div class="card__icon">⚙️</div>
             <h4>Automation</h4>
-            <p class="muted">Small workflows that remove annoying manual work.</p>
+            <p class="muted">Small workflows that remove manual work and reduce “admin tax”.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="work">
+    <!-- PROOF -->
+    <section class="section" id="proof">
       <div class="container">
         <div class="section__head">
-          <h3>How we work</h3>
-          <p class="muted">Simple process. No 47-slide strategy deck required.</p>
+          <h3>Why us</h3>
+          <p class="muted">Simple process. Fast feedback. Real progress.</p>
         </div>
 
-        <ol class="steps">
-          <li>
+        <div class="steps">
+          <div class="step">
             <span class="step__num">01</span>
             <div>
-              <h4>Clarify the goal</h4>
-              <p class="muted">What does “success” look like in plain English?</p>
+              <h4>Define the goal</h4>
+              <p class="muted">We translate vague ideas into a crisp, testable scope.</p>
             </div>
-          </li>
-          <li>
+          </div>
+
+          <div class="step">
             <span class="step__num">02</span>
             <div>
-              <h4>Build a clean first version</h4>
-              <p class="muted">Ship something simple and useful quickly.</p>
+              <h4>Ship a first version</h4>
+              <p class="muted">You get a working thing quickly. Then we refine.</p>
             </div>
-          </li>
-          <li>
+          </div>
+
+          <div class="step">
             <span class="step__num">03</span>
             <div>
-              <h4>Iterate based on reality</h4>
-              <p class="muted">Improve what people actually use—not what we imagine.</p>
+              <h4>Iterate with data</h4>
+              <p class="muted">We improve based on reality, not vibes.</p>
             </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section section--tight" id="contact">
-      <div class="container contactStrip">
-        <div>
-          <h3>Want to chat?</h3>
-          <p class="muted">Use the form above, or email directly.</p>
+          </div>
         </div>
-        <a class="btn btn--ghost" href="mailto:YOUR_EMAIL@DOMAIN.COM?subject=Northline%20enquiry">
-          Email us
-        </a>
+
+        <div class="ctaStrip">
+          <div>
+            <h3>Ready to build?</h3>
+            <p class="muted">Send a quick note and we’ll reply with next steps.</p>
+          </div>
+          <a class="btn btn--primary" href="#contact">Contact →</a>
+        </div>
       </div>
     </section>
   </main>
