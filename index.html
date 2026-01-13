@@ -3,96 +3,91 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>North Line Ventures — Sleek Landing Page</title>
-  <meta name="description" content="A sleek landing page with a contact form that sends enquiries to your inbox." />
-
-  <!-- Open Graph (nice previews when sharing the link) -->
-  <meta property="og:title" content="Your Brand" />
-  <meta property="og:description" content="A sleek landing page with a contact form." />
-  <meta property="og:type" content="website" />
+  <title>Northline Ventures</title>
+  <meta name="description" content="Northline Ventures — building useful things. Get in touch." />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__name">YOUR BRAND</span>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="logo" href="#top" aria-label="Home">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Northline Ventures</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#features">What we do</a>
-        <a class="nav__link" href="#contact">Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#work">How we work</a>
+        <a class="nav__cta" href="#contact">Contact</a>
       </nav>
 
-      <button class="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-        <span class="navToggle__bar"></span>
-        <span class="navToggle__bar"></span>
-        <span class="navToggle__bar"></span>
+      <button class="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
+
+    <nav class="mobileNav" aria-label="Mobile navigation">
+      <a href="#services">Services</a>
+      <a href="#work">How we work</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="container hero__grid">
-        <div class="card hero__copy">
-          <div class="badge">✨ Simple, fast, and built to ship</div>
+        <div class="hero__copy">
+          <p class="pill">Brisbane • Building practical products</p>
 
-          <h1 class="hero__title">
-            A <span class="accent">sleek</span> landing page that does its job.
+          <h1>
+            We build <span class="accent">simple</span> solutions<br />
+            to real problems.
           </h1>
 
-          <p class="hero__lead">
-            Replace this with your one-liner: what you do + who it’s for + the outcome.
-            Keep it short. The internet has the attention span of a caffeinated squirrel.
+          <p class="lead">
+            Use this space for a crisp one-liner about what Northline does.
+            Keep it human. Keep it short. Keep it out of corporate-speak jail.
           </p>
 
-          <div class="ctaRow">
-            <a class="btn btn--primary" href="#contact">Contact us →</a>
-            <a class="btn btn--secondary" href="#features">See what we do</a>
+          <div class="actions">
+            <a class="btn btn--primary" href="#contact">Get in touch</a>
+            <a class="btn btn--ghost" href="#services">What we do</a>
           </div>
 
-          <div class="miniGrid" id="features">
-            <div class="mini">
-              <h3>What you do</h3>
-              <p>One sentence describing your offer.</p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__num">Fast</div>
+              <div class="stat__label">Simple builds, quick iterations</div>
             </div>
-            <div class="mini">
-              <h3>Who it’s for</h3>
-              <p>Be specific. It’s weirdly powerful.</p>
+            <div class="stat">
+              <div class="stat__num">Practical</div>
+              <div class="stat__label">Focused on outcomes</div>
             </div>
-            <div class="mini">
-              <h3>Why you</h3>
-              <p>Credibility in one line.</p>
+            <div class="stat">
+              <div class="stat__num">Clean</div>
+              <div class="stat__label">Design that doesn’t shout</div>
             </div>
           </div>
         </div>
 
-        <div class="card hero__panel" id="contact">
-          <div class="badge">📨 Contact us</div>
-          <h2 class="panel__title">Send an enquiry</h2>
-          <p class="panel__lead">
-            This form sends straight to your inbox using FormSubmit (free).
-          </p>
+        <div class="hero__card">
+          <div class="heroCard__header">
+            <p class="kicker">Contact</p>
+            <h2>Send an enquiry</h2>
+            <p class="muted">
+              Messages go straight to your inbox. No subscriptions, no backend.
+            </p>
+          </div>
 
-          <!-- ✅ FREE FORM HANDLER (no backend) -->
-          <!-- 1) Replace YOUR_EMAIL@DOMAIN.COM with the inbox you want enquiries to land in.
-               2) First submission triggers an email verification step.
-          -->
-          <form class="form"
-                action="https://formsubmit.co/northlineventuresptyltd.com.au"
-                method="POST">
-
-            <!-- FormSubmit options -->
-            <input type="hidden" name="_subject" value="New website enquiry" />
+          <!-- FREE: FormSubmit -->
+          <!-- Replace YOUR_EMAIL@DOMAIN.COM with where you want enquiries delivered. -->
+          <form class="form" action="https://formsubmit.co/YOUR_EMAIL@DOMAIN.COM" method="POST">
+            <input type="hidden" name="_subject" value="New enquiry — Northline Ventures" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="true" />
             <input type="hidden" name="_next" value="thank-you.html" />
-
-            <!-- Honeypot (spam trap) -->
             <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" />
 
             <div class="field">
@@ -110,41 +105,90 @@
               <textarea id="message" name="message" placeholder="What can we help with?" required></textarea>
             </div>
 
-            <button class="btn btn--primary btn--full" type="submit">Send message →</button>
+            <button class="btn btn--primary btn--full" type="submit">Send message</button>
 
-            <p class="fineprint">
-              We’ll only use your details to reply to your enquiry. No spam. Spam is for 2009.
+            <p class="tiny muted">
+              We’ll only use this to reply to your enquiry. No newsletters unless you *ask*.
             </p>
           </form>
-
-          <div class="altContact">
-            <div class="altContact__line"></div>
-            <span class="altContact__text">or</span>
-            <div class="altContact__line"></div>
-          </div>
-
-          <a class="btn btn--secondary btn--full"
-             href="mailto:YOUR_EMAIL@DOMAIN.COM?subject=Website%20enquiry">
-            Email instead
-          </a>
         </div>
       </div>
     </section>
 
-    <section class="footerCallout">
-      <div class="container footerCallout__inner">
-        <p class="footerCallout__text">Want something more customised (logo, sections, FAQ, etc.)?</p>
-        <a class="btn btn--secondary" href="#contact">Message us</a>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h3>Services</h3>
+          <p class="muted">A simple set of offerings. Swap these to match what you actually do.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h4>Landing pages</h4>
+            <p class="muted">Clean, fast pages that look premium and convert.</p>
+          </article>
+          <article class="card">
+            <h4>Prototypes</h4>
+            <p class="muted">Rapid MVPs to test ideas without over-building.</p>
+          </article>
+          <article class="card">
+            <h4>Automation</h4>
+            <p class="muted">Small workflows that remove annoying manual work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section__head">
+          <h3>How we work</h3>
+          <p class="muted">Simple process. No 47-slide strategy deck required.</p>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span class="step__num">01</span>
+            <div>
+              <h4>Clarify the goal</h4>
+              <p class="muted">What does “success” look like in plain English?</p>
+            </div>
+          </li>
+          <li>
+            <span class="step__num">02</span>
+            <div>
+              <h4>Build a clean first version</h4>
+              <p class="muted">Ship something simple and useful quickly.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step__num">03</span>
+            <div>
+              <h4>Iterate based on reality</h4>
+              <p class="muted">Improve what people actually use—not what we imagine.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="contact">
+      <div class="container contactStrip">
+        <div>
+          <h3>Want to chat?</h3>
+          <p class="muted">Use the form above, or email directly.</p>
+        </div>
+        <a class="btn btn--ghost" href="mailto:YOUR_EMAIL@DOMAIN.COM?subject=Northline%20enquiry">
+          Email us
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> YOUR BRAND</span>
-      <span class="footer__right">
-        Built on GitHub Pages • <a href="#top">Back to top</a>
-      </span>
+      <span class="muted">© <span id="year"></span> Northline Ventures</span>
+      <span class="muted">northlineventures.com.au</span>
     </div>
   </footer>
 
