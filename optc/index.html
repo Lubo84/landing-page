@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#020814" />
+    <meta name="description" content="Ormeau Pimpama Tennis Club — affordable, community-run tennis on Mirambeena Drive, Pimpama." />
+    <title>Ormeau Pimpama Tennis Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23020814'/%3E%3Ccircle cx='32' cy='32' r='21' fill='%23f4dc35'/%3E%3Cpath d='M14 24c10 2 16 10 17 29M50 40C40 38 34 30 33 11' fill='none' stroke='%23020814' stroke-width='3'/%3E%3C/svg%3E" />
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <div class="film-grain" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Ormeau Pimpama Tennis Club home">
+        <span class="brand-ball" aria-hidden="true"></span>
+        <span class="brand-copy"><strong>OPTC</strong><small>Ormeau · Pimpama</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#club">The club</a>
+        <a href="#play">Play</a>
+        <a href="#join">Membership</a>
+      </nav>
+      <a class="button button-small button-outline header-cta" href="mailto:treasurer@optc.org.au?subject=OPTC%20membership%20enquiry">Join the club</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <a href="#club">The club</a>
+        <a href="#play">Play</a>
+        <a href="#join">Membership</a>
+        <a href="mailto:treasurer@optc.org.au?subject=OPTC%20membership%20enquiry">Join the club</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="./assets/hero-courts.webp" alt="" fetchpriority="high" />
+          <div class="hero-wash"></div>
+          <div class="court-grid"></div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Community tennis <span>//</span> Northern Gold Coast</p>
+          <h1 id="hero-title" class="display-title reveal reveal-delay-1">
+            <span>This is</span>
+            <em>your court.</em>
+          </h1>
+          <p class="hero-intro reveal reveal-delay-2">Local tennis without the velvet rope. Pick up a racquet, meet good people and play under the lights.</p>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a class="button button-primary" href="mailto:treasurer@optc.org.au?subject=I%27d%20like%20to%20join%20OPTC">Become a member <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#play">Find your game <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <div class="hero-scoreboard reveal reveal-delay-3" aria-label="Club snapshot">
+          <div><span>Courts</span><strong>04</strong></div>
+          <div><span>Setting</span><strong>LOCAL</strong></div>
+          <div><span>Vibe</span><strong>OPEN</strong></div>
+        </div>
+
+        <a class="scroll-cue" href="#club" aria-label="Scroll to discover the club">
+          <span>Scroll to the baseline</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="manifesto" id="club" aria-labelledby="manifesto-title">
+        <div class="section-marker" aria-hidden="true"><span>01</span><i></i><span>THE CLUB</span></div>
+        <div class="manifesto-layout">
+          <div>
+            <p class="eyebrow reveal">A fresh chapter</p>
+            <h2 id="manifesto-title" class="section-title reveal">Tennis belongs<br />to everyone.</h2>
+          </div>
+          <div class="manifesto-copy reveal">
+            <p class="lead">We’re a community-run club for Ormeau, Pimpama and every suburb in between.</p>
+            <p>No marble foyer. No hushed dress code. Just accessible courts, social tennis and the kind of competition that ends with a laugh at the net.</p>
+          </div>
+        </div>
+        <div class="kinetic-type" aria-hidden="true">
+          <span>PLAY · CONNECT · BELONG · PLAY · CONNECT · BELONG ·</span>
+        </div>
+      </section>
+
+      <section class="story-track" id="play" aria-label="Ways to play">
+        <div class="story-sticky">
+          <div class="story-media" aria-hidden="true">
+            <img src="./assets/courtside-doubles.webp" alt="" loading="lazy" />
+            <div class="story-vignette"></div>
+          </div>
+          <div class="story-head">
+            <div class="section-marker light" aria-hidden="true"><span>02</span><i></i><span>FIND YOUR GAME</span></div>
+            <p>More rallies.<br />Fewer barriers.</p>
+          </div>
+          <div class="story-progress" aria-hidden="true"><span></span></div>
+          <article class="story-card card-one">
+            <span class="card-index">01 / 03</span>
+            <p class="card-kicker">Weeknight energy</p>
+            <h3>Social tennis,<br />under the lights.</h3>
+            <p>Friendly organised sessions make it easy to turn up, meet players and get straight into a match.</p>
+          </article>
+          <article class="story-card card-two">
+            <span class="card-index">02 / 03</span>
+            <p class="card-kicker">Your local courts</p>
+            <h3>Play more.<br />Travel less.</h3>
+            <p>Membership gives you general court access, subject to availability and the club’s court-use rules.</p>
+          </article>
+          <article class="story-card card-three">
+            <span class="card-index">03 / 03</span>
+            <p class="card-kicker">All levels welcome</p>
+            <h3>Bring a game.<br />Or build one.</h3>
+            <p>Returning player, regular competitor or complete beginner—there’s room on court for you.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sessions" aria-labelledby="sessions-title">
+        <div class="section-marker" aria-hidden="true"><span>03</span><i></i><span>COURT TIME</span></div>
+        <div class="sessions-heading">
+          <p class="eyebrow reveal">Start with one hit</p>
+          <h2 id="sessions-title" class="section-title reveal">A game is<br />closer than you think.</h2>
+        </div>
+        <div class="session-grid">
+          <article class="session-card reveal">
+            <span class="session-no">01</span>
+            <div>
+              <p class="card-kicker">Every week</p>
+              <h3>Social tennis</h3>
+              <p>Easy-going organised play for adults who want matches, movement and a good local crowd.</p>
+            </div>
+            <strong>$4 <small>/ session</small></strong>
+          </article>
+          <article class="session-card reveal reveal-delay-1">
+            <span class="session-no">02</span>
+            <div>
+              <p class="card-kicker">On your time</p>
+              <h3>Member court access</h3>
+              <p>Arrange a hit with family or friends and use the courts when they’re available.</p>
+            </div>
+            <strong>MORE <small>court time</small></strong>
+          </article>
+          <article class="session-card reveal reveal-delay-2">
+            <span class="session-no">03</span>
+            <div>
+              <p class="card-kicker">Coming next</p>
+              <h3>Coaching &amp; club play</h3>
+              <p>We’re shaping the club’s next program of coaching, organised play and community events.</p>
+            </div>
+            <strong>WATCH <small>this space</small></strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="join" id="join" aria-labelledby="join-title">
+        <div class="join-lines" aria-hidden="true"></div>
+        <div class="join-ball" aria-hidden="true"><span></span></div>
+        <div class="join-inner">
+          <p class="eyebrow reveal">Memberships open</p>
+          <h2 id="join-title" class="join-title reveal">Ready to<br /><em>serve?</em></h2>
+          <p class="join-copy reveal">Join a local club with a new committee, a clear direction and plenty of tennis still to play.</p>
+          <div class="join-actions reveal">
+            <a class="button button-dark" href="mailto:treasurer@optc.org.au?subject=OPTC%20membership%20application">Start your membership <span aria-hidden="true">↗</span></a>
+            <a class="email-link" href="mailto:treasurer@optc.org.au">treasurer@optc.org.au</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <span class="brand-ball" aria-hidden="true"></span>
+        <strong>Ormeau<br />Pimpama<br />Tennis Club</strong>
+      </div>
+      <div>
+        <p class="footer-label">Find the courts</p>
+        <p>Mirambeena Drive<br />Pimpama, Queensland</p>
+      </div>
+      <div>
+        <p class="footer-label">Get in touch</p>
+        <a href="mailto:treasurer@optc.org.au">treasurer@optc.org.au</a>
+      </div>
+      <p class="copyright">Community run. Court ready. © <span id="year"></span> OPTC.</p>
+    </footer>
+  </body>
+</html>
