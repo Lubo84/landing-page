@@ -66,8 +66,10 @@ button { font: inherit; }
   width: 248px;
   padding: .55rem .9rem;
   border-radius: .35rem;
-  background: rgba(255, 255, 255, .95);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, .15);
+  border: 1px solid rgba(255, 255, 255, .22);
+  background: linear-gradient(135deg, rgba(226, 236, 247, .94), rgba(194, 213, 232, .88));
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .45);
+  backdrop-filter: blur(14px);
 }
 .brand-plate img { width: 100%; height: 58px; object-fit: contain; }
 .primary-nav { display: flex; justify-content: center; gap: clamp(1rem, 2.3vw, 2.4rem); }
@@ -238,14 +240,14 @@ button { font: inherit; }
 .story-intro .section-index { padding-top: 3.5rem; }
 .story-title { width: min(calc(100% - 3rem), var(--max)); margin: 3rem auto 0; font-size: clamp(3.8rem, 8vw, 8rem); }
 .story-title span { color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.55); }
-.story-panels { position: relative; z-index: 3; width: min(calc(100% - 3rem), var(--max)); margin: -70vh auto 0; padding-bottom: 16vh; display: grid; gap: 42vh; }
-.story-card { width: min(540px, 100%); padding: clamp(1.6rem, 3vw, 2.8rem); border-top: 3px solid var(--lime); background: rgba(1, 10, 28, .9); box-shadow: 0 30px 80px rgba(0,0,0,.35); backdrop-filter: blur(12px); }
+.story-panels { position: relative; z-index: 3; width: min(calc(100% - 3rem), var(--max)); margin: -48vh auto 0; padding-bottom: 16vh; display: grid; gap: 42vh; }
+.story-card { position: relative; width: min(540px, 100%); min-height: 460px; padding: clamp(1.6rem, 3vw, 2.8rem); display: flex; flex-direction: column; border-top: 3px solid var(--lime); background: rgba(1, 10, 28, .9); box-shadow: 0 30px 80px rgba(0,0,0,.35); backdrop-filter: blur(12px); }
 .story-card:nth-child(even) { margin-left: auto; border-color: var(--orange); }
 .story-card:last-child { border-color: var(--blue); }
-.story-count { float: right; color: var(--muted); font-family: var(--mono); font-size: .68rem; }
+.story-count { position: absolute; top: clamp(1.6rem, 3vw, 2.8rem); right: clamp(1.6rem, 3vw, 2.8rem); color: var(--muted); font-family: var(--mono); font-size: .68rem; }
 .story-card h3 { margin: .7rem 0 1.15rem; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4.6rem); font-weight: 400; line-height: .88; letter-spacing: -.055em; text-transform: uppercase; }
 .story-card > p:not(.eyebrow) { max-width: 420px; color: #cbd8e7; }
-.inline-link { display: inline-block; margin-top: .65rem; color: var(--lime); }
+.inline-link { display: inline-block; align-self: flex-start; margin-top: auto; color: var(--lime); }
 
 .pathways { position: relative; z-index: 4; padding-bottom: 8rem; color: var(--ink); background: var(--paper); }
 .pathways-head { width: min(calc(100% - 3rem), var(--max)); margin: 0 auto; padding: 3.2rem 0 5rem; }
@@ -279,7 +281,7 @@ a.pathway-action:hover i, a.pathway-action:focus-visible i { transform: translat
 .join-mark { position: absolute; right: -2rem; top: 8%; width: min(22vw, 300px); transform: rotate(8deg); opacity: .22; }
 
 .site-footer { padding: 4rem max(1.5rem, calc((100vw - var(--max)) / 2)); display: grid; grid-template-columns: 1.4fr .8fr .8fr; gap: 3rem; color: #cbd8e7; background: var(--ink-deep); }
-.footer-brand { width: min(330px, 100%); padding: 1rem; border-radius: .35rem; background: var(--paper); }
+.footer-brand { width: min(330px, 100%); padding: 1rem; border: 1px solid rgba(255,255,255,.16); border-radius: .35rem; background: linear-gradient(135deg, rgba(226, 236, 247, .94), rgba(194, 213, 232, .88)); box-shadow: inset 0 1px 0 rgba(255,255,255,.4); }
 .site-footer .micro { color: var(--lime); }
 .site-footer p { margin: 0; }
 .site-footer a { border-bottom: 1px solid rgba(255,255,255,.5); }
@@ -372,7 +374,8 @@ a.pathway-action:hover i, a.pathway-action:focus-visible i { transform: translat
   .section-index, .story-title, .story-panels, .pathways-head, .pathway-list, .payment-content { width: calc(100% - 2rem); }
   .section-title, .story-title { font-size: clamp(3rem, 15vw, 5rem); }
   .play-story { min-height: 260vh; }
-  .story-panels { gap: 36vh; }
+  .story-panels { margin-top: -42vh; gap: 36vh; }
+  .story-card { min-height: 440px; }
   .story-card:nth-child(even) { margin-left: 0; }
   .pathway { grid-template-columns: 40px 1fr; }
   .pathway-action { grid-column: 2; width: 100%; }
